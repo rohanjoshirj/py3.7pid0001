@@ -1,21 +1,21 @@
+********************************
 QUICK TIPS FOR GIT AND GITHUB
+********************************
 
-go to project folder 
+1. go to project folder 
 git init 
 
-link to github repo
+2.link to github repo
 git remote add origin "link"
 
-pull all files 
+3.pull all files 
 git pull origin master
 
-push 
+4.push 
 git push 
 *********************************
 note
 git pull = git fetch + git merge
-
-
 
 ***********************************************
 
