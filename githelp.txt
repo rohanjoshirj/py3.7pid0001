@@ -1,0 +1,73 @@
+python
+pip install pipenv 
+create your empty directory with your code 
+navigate to it 
+you don't neeed to install virtualenviromnent etc.
+
+start installing 
+pipenv install requests
+
+it will do all for you 
+
+check your code editor 
+you will see pipfile and pipfile.lock (dont touch it)
+
+pipenv shell
+will activate virtualenvironment for you
+
+deactivate using exit 
+
+you can run anythong directly without activating environment
+pipenv run python
+you dont need to deactivate using exit as before
+
+to install requirements.txt
+pipenv install -r (directory)
+will update all the packages in the pipfile
+
+to install packages without entering entries in pipfile 
+pipenv install xyz --dev
+
+uninstall 
+pipenv uninstall xyz
+
+to create a requirement.txt file for pip users
+pipenv lock -r
+
+
+change python version
+
+method 1
+
+update pipfile python version
+pipenv --python(version)
+
+method 2
+update pip file python versioon
+pipenv --rm
+pipenv install
+
+
+check package saftey and versions
+pipenv check
+
+update packages
+update pipfile
+pipenv install
+
+check package dependencies
+pipenv graph
+
+check your dependencies at the end of project 
+pipenv lock
+push your project for development 
+pipenv install --ignore-pipfile
+
+setting up environmnet variables 
+make a new file 
+name .env
+(SECRET_ KEY) ="my secret key "
+pipenv run python
+import os
+os.environ['SECRET']
+
