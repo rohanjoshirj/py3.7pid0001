@@ -1,73 +1,131 @@
-python
-pip install pipenv 
-create your empty directory with your code 
-navigate to it 
-you don't neeed to install virtualenviromnent etc.
-
-start installing 
-pipenv install requests
-
-it will do all for you 
-
-check your code editor 
-you will see pipfile and pipfile.lock (dont touch it)
-
-pipenv shell
-will activate virtualenvironment for you
-
-deactivate using exit 
-
-you can run anythong directly without activating environment
-pipenv run python
-you dont need to deactivate using exit as before
-
-to install requirements.txt
-pipenv install -r (directory)
-will update all the packages in the pipfile
-
-to install packages without entering entries in pipfile 
-pipenv install xyz --dev
-
-uninstall 
-pipenv uninstall xyz
-
-to create a requirement.txt file for pip users
-pipenv lock -r
 
 
-change python version
 
-method 1
+go to project folder 
+git init 
 
-update pipfile python version
-pipenv --python(version)
+link to github repo
+git remote add origin "link"
 
-method 2
-update pip file python versioon
-pipenv --rm
-pipenv install
+pull all files 
+git pull origin master
+
+push 
+git push 
+*********************************
+note
+git pull = git fetch + git merge
 
 
-check package saftey and versions
-pipenv check
 
-update packages
-update pipfile
-pipenv install
+***********************************************
 
-check package dependencies
-pipenv graph
+*add any ney file in workspace (local repo)
 
-check your dependencies at the end of project 
-pipenv lock
-push your project for development 
-pipenv install --ignore-pipfile
+check status of loacal repo index
+git status
 
-setting up environmnet variables 
-make a new file 
-name .env
-(SECRET_ KEY) ="my secret key "
-pipenv run python
-import os
-os.environ['SECRET']
+add files to index
+git add (filename)
+git add -A (all changes found)
 
+recheck status of local repo index
+git status
+
+commit changes in local repo 
+git commit -m "your comment" (signle file)
+git commit -a"your comment " (all files)
+
+ 
+check log status
+git log 
+
+
+*****************************************************
+paralelle dev
+
+BRANCHING
+
+we are in main branch by def
+used to add a new branch with all me,bers of the main branch so that we can add features without touching the main branch 
+
+create branch
+git branch firstbranch
+
+change branch
+git checkout firstbranch
+
+ls  to list files in branches
+
+branch will contain all files of master but will not interfear with the master (master will not have files made specifically for a branch)
+
+******************************************
+MERGINNG
+
+checkout to master branch first
+
+git merge firstbranch
+
+all commits will in branch will only comeup in master after merging
+
+*******************************************
+REBAISING
+
+kind of merging, merging branches to master
+cleaner project, reduce branching 
+
+git checkout firstbranch 
+you didi soome changes 
+
+git add  -A (adding all files to branch index)
+git commit -a -m "your comment" (adding and commit all files to branch )
+
+check 
+ls
+
+git checkout master 
+your first branch files are not here yet 
+
+git checkout firstbranch
+git checkout master
+git rebase firstbranch
+********************************************************
+GIT PUSH
+
+
+1. ADDING SSH KEY (security so that you can only push) 
+
+*make ssh key
+ssh-keygen
+*see ssh key
+cat (path)
+*add the ssh key in github 
+go to settings
+go to ssh gpg keys
+paste ssh key give title
+add it 
+
+*authenticate
+ssh -T git@github.com
+
+
+2.PUSH A BRANCH (individual branch commit individual view on github)
+git checkout firstbranch 
+git push origin firstbranch
+
+PUSH MASTER 
+git checkout master
+git push origin master
+********************************************************************* 
+REVERT CHANGES
+
+git log 
+
+copy commit hash first 8 digits  
+
+git checkout commithashcode nameoffile
+
+check your requested version
+cat filename 
+
+  
