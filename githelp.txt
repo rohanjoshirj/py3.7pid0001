@@ -1,5 +1,4 @@
-
-
+QUICK TIPS FOR GIT AND GITHUB
 
 go to project folder 
 git init 
