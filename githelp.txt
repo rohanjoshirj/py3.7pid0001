@@ -1,5 +1,5 @@
 ********************************
-QUICK TIPS FOR GIT AND GITHUB
+QUICK TIPS FOR GIT AND GITHUB ****
 ********************************
 
 1. go to project folder 
